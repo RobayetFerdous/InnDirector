@@ -34,7 +34,7 @@ public class LoginController implements Initializable {
 
         System.out.println("Login Successfull!");
 
-        HelloApplication.changeScene("dashboard",900,600);
+        HelloApplication.changeScene("receptionistPanel",900,600);
     }
 
     @FXML

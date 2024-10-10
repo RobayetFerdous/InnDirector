@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.robayet.inndirector.Controller.NewCustomerFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="608.0" layoutX="-1.0" layoutY="-7.0" stroke="TRANSPARENT" strokeType="INSIDE" width="270.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.529411792755127" green="0.6392157077789307" blue="0.6392157077789307" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6745098233222961" green="0.5529412031173706" blue="0.6039215922355652" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label alignment="CENTER" layoutX="268.0" layoutY="14.0" prefHeight="40.0" prefWidth="633.0" text="NEW CUSTOMER FORM">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="183.0" layoutY="332.0" prefHeight="40.0" prefWidth="200.0" />
+      <Button layoutX="34.0" layoutY="20.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="New Customer">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="34.0" layoutY="538.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="40.0" prefWidth="200.0" text="Logout">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="34.0" layoutY="76.0" mnemonicParsing="false" onAction="#clickRoom" prefHeight="40.0" prefWidth="200.0" text="Room">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="34.0" layoutY="132.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Check Out">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="269.0" layoutY="101.0" prefHeight="30.0" prefWidth="270.0" text="Name:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField layoutX="539.0" layoutY="101.0" prefHeight="30.0" prefWidth="270.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="269.0" layoutY="157.0" prefHeight="30.0" prefWidth="270.0" text="Number:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField layoutX="539.0" layoutY="157.0" prefHeight="30.0" prefWidth="270.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="269.0" layoutY="206.0" prefHeight="30.0" prefWidth="270.0" text="Gender:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="555.0" layoutY="206.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" text="Male">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="685.0" layoutY="206.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" text="Female">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="269.0" layoutY="257.0" prefHeight="30.0" prefWidth="270.0" text="Check-in Time:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="539.0" layoutY="257.0" prefHeight="30.0" prefWidth="270.0" text="Real Time From System">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="485.0" layoutY="498.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Add Customer">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
