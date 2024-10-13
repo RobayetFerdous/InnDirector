@@ -8,4 +8,12 @@ public class CheckOutController {
     public void clickLogout(){
         HelloApplication.changeScene("login", 600, 400);
     }
+    @FXML
+    public void clickNewCustomer(){
+        HelloApplication.changeScene("newCustomerForm",900,600);
+    }
+    @FXML
+    public void clickRoom(){
+        HelloApplication.changeScene("viewRoom",900,600);
+    }
 }

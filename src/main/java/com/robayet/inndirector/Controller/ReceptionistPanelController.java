@@ -16,4 +16,9 @@ public class ReceptionistPanelController {
     public void clickRoom(){
         HelloApplication.changeScene("viewRoom",900,600);
     }
+    @FXML
+    public void clickCheckOut(){
+        HelloApplication.changeScene("checkOut",900,600);
+    }
+
 }

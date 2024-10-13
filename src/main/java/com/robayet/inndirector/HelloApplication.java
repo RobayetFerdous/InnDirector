@@ -15,7 +15,7 @@ public class HelloApplication extends Application {
         this.stage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        scene.getStylesheets().add(getClass().getResource("Style.css").toExternalForm());
+        //scene.getStylesheets().add(getClass().getResource("Style.css").toExternalForm());
         stage.setTitle("InnDirector");
         stage.setScene(scene);
         stage.show();

@@ -51,7 +51,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="34.0" layoutY="132.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Check Out">
+      <Button layoutX="34.0" layoutY="132.0" mnemonicParsing="false" onAction="#clickCheckOut" prefHeight="40.0" prefWidth="200.0" text="Check Out">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

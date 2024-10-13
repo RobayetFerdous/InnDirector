@@ -12,4 +12,8 @@ public class ViewRoomController {
     public void clickNewCustomer(){
         HelloApplication.changeScene("newCustomerForm",900,600);
     }
+    @FXML
+    public void clickCheckOut(){
+        HelloApplication.changeScene("checkOut",900,600);
+    }
 }
