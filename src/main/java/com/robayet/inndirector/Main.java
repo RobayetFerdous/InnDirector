@@ -7,13 +7,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class Main extends Application {
     public static Stage stage;
 
     @Override
     public void start(Stage stage) throws IOException {
         this.stage = stage;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         //scene.getStylesheets().add(getClass().getResource("Style.css").toExternalForm());
         stage.setTitle("InnDirector");
@@ -27,7 +27,7 @@ public class HelloApplication extends Application {
 
     public static void changeScene(String sceneName, int prefWidth, int prefHight) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(sceneName + ".fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(sceneName + ".fxml"));
             Scene scene = new Scene(fxmlLoader.load(), prefWidth, prefHight);
             stage.setScene(scene);
         } catch (IOException ex) {

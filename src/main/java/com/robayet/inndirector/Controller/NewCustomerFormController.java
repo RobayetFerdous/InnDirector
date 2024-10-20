@@ -1,19 +1,19 @@
 package com.robayet.inndirector.Controller;
 
-import com.robayet.inndirector.HelloApplication;
+import com.robayet.inndirector.Main;
 import javafx.fxml.FXML;
 
 public class NewCustomerFormController {
     @FXML
     public void clickLogout(){
-        HelloApplication.changeScene("login", 600, 400);
+        Main.changeScene("login", 600, 400);
     }
     @FXML
     public void clickRoom(){
-        HelloApplication.changeScene("viewRoom",900,600);
+        Main.changeScene("viewRoom",900,600);
     }
     @FXML
     public void clickNewCustomer(){
-        HelloApplication.changeScene("newCustomerForm",900,600);
+        Main.changeScene("newCustomerForm",900,600);
     }
 }

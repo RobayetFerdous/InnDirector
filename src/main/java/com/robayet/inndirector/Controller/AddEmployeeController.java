@@ -1,11 +1,11 @@
 package com.robayet.inndirector.Controller;
 
-import com.robayet.inndirector.HelloApplication;
+import com.robayet.inndirector.Main;
 import javafx.fxml.FXML;
 
 public class AddEmployeeController {
     @FXML
     public void clickLogout() {
-        HelloApplication.changeScene("login", 600, 400);
+        Main.changeScene("login", 600, 400);
     }
 }

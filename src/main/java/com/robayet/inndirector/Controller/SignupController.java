@@ -1,6 +1,6 @@
 package com.robayet.inndirector.Controller;
 
-import com.robayet.inndirector.HelloApplication;
+import com.robayet.inndirector.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
@@ -51,6 +51,6 @@ public class SignupController implements Initializable {
 
 
 
-        HelloApplication.changeScene("login",600,400);
+        Main.changeScene("login",600,400);
     }
 }
