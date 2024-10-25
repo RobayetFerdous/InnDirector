@@ -1,6 +1,7 @@
 package com.robayet.inndirector.Controller;
 
 import com.robayet.inndirector.Main;
+import com.robayet.inndirector.service.UserService;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
@@ -23,10 +24,6 @@ public class LoginController implements Initializable {
 
     @FXML
     public void clickLogin() {
-        String userName = userNameLogin.getText();
-        String password = passwordLogin.getText();
-        System.out.println(userName + " " + password);
-
 
         System.out.println("Login Successfull!");
 

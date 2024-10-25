@@ -16,14 +16,13 @@ import java.util.ResourceBundle;
 public class SignupController {
 
 
-
-
     @FXML
     TextField userNameSignup;
     @FXML
     PasswordField passwordSignup;
+
     @FXML
-    public void clickSignup(){
+    public void clickSignup() {
 
         String userName = userNameSignup.getText();
         String password = passwordSignup.getText();
@@ -31,18 +30,17 @@ public class SignupController {
 
         String line = userName + "," + password + "\n";
 
-        try{
-            RandomAccessFile raf = new RandomAccessFile("signup.txt","rw");
+        try {
+            RandomAccessFile raf = new RandomAccessFile("signup.txt", "rw");
             raf.seek(raf.length());
             raf.writeBytes(line);
-        }catch (FileNotFoundException ex){
+        } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
 
-
-        Main.changeScene("login",600,400);
+        Main.changeScene("login", 600, 400);
     }
 }
