@@ -13,15 +13,8 @@ import java.io.RandomAccessFile;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SignupController implements Initializable {
-    @FXML
-    ChoiceBox<String> accountTypeSignup;
+public class SignupController {
 
-    String[] accountTypeInSignup = {"Admin", "Receptionist"};
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        accountTypeSignup.getItems().addAll(accountTypeInSignup);
-    }
 
 
 
@@ -32,12 +25,11 @@ public class SignupController implements Initializable {
     @FXML
     public void clickSignup(){
 
-        String userType = accountTypeSignup.getValue();
         String userName = userNameSignup.getText();
         String password = passwordSignup.getText();
 
 
-        String line = userType + "," + userName + "," + password + "\n";
+        String line = userName + "," + password + "\n";
 
         try{
             RandomAccessFile raf = new RandomAccessFile("signup.txt","rw");
