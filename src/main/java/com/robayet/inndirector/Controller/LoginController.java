@@ -6,6 +6,7 @@ import com.robayet.inndirector.service.UserService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -26,11 +27,33 @@ public class LoginController implements Initializable {
 
     @FXML
     public void clickLogin(ActionEvent event) {
-        UserService userService = new UserService();
-        userService.signup(new UserInfo(userNameLogin.getText(), passwordLogin.getText()));
-        System.out.println("Sign-up Successfull!");
+        String username = userNameLogin.getText();
+        String password = passwordLogin.getText();
 
-        Main.changeScene("receptionistPanel",900,600);
+        UserService userService = new UserService();
+        boolean isAuthenticated = false;
+
+        for (UserInfo user : userService.list()){
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)){
+                isAuthenticated = true;
+                break;
+            }
+        }
+        if (isAuthenticated){
+            System.out.println("Login Successfull!");
+            Main.changeScene("receptionistPanel",900,600);
+        }else {
+            System.out.println("Invalid username or password.");
+            //alertbox
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Invalid username or password");
+            alert.setContentText("Please check your username and password and try again.");
+            alert.showAndWait();
+
+            //clr pass
+            passwordLogin.clear();
+        }
     }
 
     @FXML
