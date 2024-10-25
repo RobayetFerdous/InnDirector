@@ -1,7 +1,9 @@
 package com.robayet.inndirector.Controller;
 
 import com.robayet.inndirector.Main;
+import com.robayet.inndirector.model.UserInfo;
 import com.robayet.inndirector.service.UserService;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
@@ -23,9 +25,10 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    public void clickLogin() {
-
-        System.out.println("Login Successfull!");
+    public void clickLogin(ActionEvent event) {
+        UserService userService = new UserService();
+        userService.signup(new UserInfo(userNameLogin.getText(), passwordLogin.getText()));
+        System.out.println("Sign-up Successfull!");
 
         Main.changeScene("receptionistPanel",900,600);
     }

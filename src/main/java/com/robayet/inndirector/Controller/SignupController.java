@@ -1,6 +1,9 @@
 package com.robayet.inndirector.Controller;
 
 import com.robayet.inndirector.Main;
+import com.robayet.inndirector.model.UserInfo;
+import com.robayet.inndirector.service.UserService;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
@@ -22,24 +25,11 @@ public class SignupController {
     PasswordField passwordSignup;
 
     @FXML
-    public void clickSignup() {
+    public void clickSignup(ActionEvent event) {
+        UserService userService = new UserService();
+        userService.signup(new UserInfo(userNameSignup.getText(), passwordSignup.getText()));
 
-        String userName = userNameSignup.getText();
-        String password = passwordSignup.getText();
-
-
-        String line = userName + "," + password + "\n";
-
-        try {
-            RandomAccessFile raf = new RandomAccessFile("signup.txt", "rw");
-            raf.seek(raf.length());
-            raf.writeBytes(line);
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        System.out.println("Sign-up Successfull!");
 
         Main.changeScene("login", 600, 400);
     }
