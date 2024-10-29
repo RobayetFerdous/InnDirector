@@ -16,4 +16,8 @@ public class ViewRoomController {
     public void clickCheckOut(){
         Main.changeScene("checkOut");
     }
+    @FXML
+    public void clickCustomerInfo(){
+        Main.changeScene("customerInfo");
+    }
 }

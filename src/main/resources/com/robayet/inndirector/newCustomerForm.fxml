@@ -57,6 +57,11 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
+      <Button layoutX="34.0" layoutY="188.0" mnemonicParsing="false" onAction="#clickCustomerInfo" prefHeight="40.0" prefWidth="200.0" text="Customer Info">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="269.0" layoutY="101.0" prefHeight="30.0" prefWidth="270.0" text="Name:">
          <font>
             <Font size="16.0" />

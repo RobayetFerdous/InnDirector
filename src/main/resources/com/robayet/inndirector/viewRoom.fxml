@@ -56,6 +56,11 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
+      <Button layoutX="34.0" layoutY="188.0" mnemonicParsing="false" onAction="#clickCustomerInfo" prefHeight="40.0" prefWidth="200.0" text="Customer Info">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
       <TableView layoutX="315.0" layoutY="60.0" prefHeight="490.0" prefWidth="540.0">
         <columns>
           <TableColumn prefWidth="174.0" text="Room Number" />

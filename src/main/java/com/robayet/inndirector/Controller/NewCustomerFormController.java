@@ -4,6 +4,7 @@ import com.robayet.inndirector.Main;
 import com.robayet.inndirector.model.CustomerInfo;
 import com.robayet.inndirector.service.CustomerService;
 import com.robayet.inndirector.service.DateAndTimeService;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -27,6 +28,10 @@ public class NewCustomerFormController implements Initializable {
     @FXML
     public void clickCheckOut(){
         Main.changeScene("checkOut");
+    }
+    @FXML
+    public void clickCustomerInfo(){
+        Main.changeScene("customerInfo");
     }
     @FXML
     private RadioButton female;
@@ -62,7 +67,7 @@ public class NewCustomerFormController implements Initializable {
         customerService.addCustomer(new CustomerInfo(name, number, gender, date));
 
         System.out.println("Customer added");
-
+        customerInfoObservableList = FXCollections.observableArrayList();
         customerInfoObservableList.clear();
         customerInfoObservableList.addAll(customerService.list());
     }
