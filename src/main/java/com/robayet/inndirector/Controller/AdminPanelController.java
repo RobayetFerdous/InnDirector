@@ -8,4 +8,8 @@ public class AdminPanelController {
     public void clickLogout(){
         Main.changeScene("login");
     }
+    @FXML
+    public void clickNewRoom(){
+        Main.changeScene("addRoom");
+    }
 }

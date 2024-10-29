@@ -61,11 +61,12 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <TableView layoutX="315.0" layoutY="60.0" prefHeight="490.0" prefWidth="540.0">
+      <TableView fx:id="roomInfoTableView" layoutX="268.0" layoutY="60.0" prefHeight="541.0" prefWidth="633.0">
         <columns>
-          <TableColumn prefWidth="174.0" text="Room Number" />
-          <TableColumn minWidth="0.0" prefWidth="181.0" text="Price" />
-            <TableColumn prefWidth="184.0" text="Bed Type" />
+          <TableColumn fx:id="roomNumber" prefWidth="120.0" text="Room Number" />
+          <TableColumn fx:id="cleaningStatus" minWidth="0.0" prefWidth="178.0" text="Cleaning Status" />
+            <TableColumn fx:id="priceTextField" prefWidth="146.0" text="Price" />
+            <TableColumn fx:id="BedType" prefWidth="188.0" text="Bed Type" />
         </columns>
       </TableView>
    </children>

@@ -67,7 +67,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="price" layoutX="560.0" layoutY="249.0" prefHeight="30.0" prefWidth="221.0" />
+      <TextField fx:id="priceTextField" layoutX="560.0" layoutY="249.0" prefHeight="30.0" prefWidth="221.0" />
       <Label layoutX="390.0" layoutY="312.0" prefHeight="40.0" prefWidth="221.0" text="Bed Type">
          <font>
             <Font name="System Bold" size="14.0" />

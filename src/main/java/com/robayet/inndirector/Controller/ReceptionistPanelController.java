@@ -27,4 +27,8 @@ public class ReceptionistPanelController {
     public void clickCustomerInfo(){
         Main.changeScene("customerInfo");
     }
+    @FXML
+    public void clickUpdateRoom(){
+        Main.changeScene("updateRoom");
+    }
 }

@@ -49,8 +49,8 @@ public class CustomerInfoController implements Initializable {
 
     @FXML
     private TableColumn<CustomerInfo, String> numberColumn;
-    private ObservableList<CustomerInfo> customerInfoObservableList;
 
+    private ObservableList<CustomerInfo> customerInfoObservableList;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         nameColumn.setCellValueFactory(c->new SimpleStringProperty(c.getValue().getName()));
