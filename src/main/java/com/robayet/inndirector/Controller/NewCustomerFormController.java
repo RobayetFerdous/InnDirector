@@ -4,6 +4,7 @@ import com.robayet.inndirector.Main;
 import com.robayet.inndirector.model.CustomerInfo;
 import com.robayet.inndirector.service.CustomerService;
 import com.robayet.inndirector.service.DateAndTimeService;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -41,6 +42,8 @@ public class NewCustomerFormController implements Initializable {
 
     @FXML
     private TextField numberTextField;
+
+    private ObservableList<CustomerInfo> customerInfoObservableList;
     @FXML
     public void clickAddCustomer(){
         String name = nameTextField.getText();
@@ -59,6 +62,9 @@ public class NewCustomerFormController implements Initializable {
         customerService.addCustomer(new CustomerInfo(name, number, gender, date));
 
         System.out.println("Customer added");
+
+        customerInfoObservableList.clear();
+        customerInfoObservableList.addAll(customerService.list());
     }
 
     @Override

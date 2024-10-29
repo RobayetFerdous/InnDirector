@@ -5,20 +5,26 @@ import javafx.fxml.FXML;
 
 public class ReceptionistPanelController {
     @FXML
-    public void clickLogout(){
+    public void clickLogout() {
         Main.changeScene("login");
     }
+
     @FXML
-    public void clickNewCustomer(){
+    public void clickNewCustomer() {
         Main.changeScene("newCustomerForm");
     }
+
     @FXML
-    public void clickRoom(){
+    public void clickRoom() {
         Main.changeScene("viewRoom");
     }
+
     @FXML
-    public void clickCheckOut(){
+    public void clickCheckOut() {
         Main.changeScene("checkOut");
     }
-
+    @FXML
+    public void clickCustomerInfo(){
+        Main.changeScene("customerInfo");
+    }
 }
