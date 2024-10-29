@@ -14,7 +14,7 @@ public class UserService {
         try {
             Connection connection = ConnectionSingleton.getConnection();
             Statement statement = connection.createStatement();
-            String query = "INSERT INTO signup VALUE('" + userInfo.getUsername() + "'," + userInfo.getPassword() + ");";
+            String query = "INSERT INTO user VALUE('" + userInfo.getUsername() + "'," + userInfo.getPassword() + ");";
             statement.execute(query);
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -25,13 +25,14 @@ public class UserService {
         try {
             Connection connection = ConnectionSingleton.getConnection();
             Statement statement = connection.createStatement();
-            String query = "SELECT * FROM signup;";
+            String query = "SELECT * FROM user;";
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()){
+                String role = resultSet.getString("role");
                 String username = resultSet.getString("username");
                 String password = resultSet.getString("password");
 
-                UserInfo userInfo = new UserInfo(username, password);
+                UserInfo userInfo = new UserInfo(role,username, password);
                 userInfoList.add(userInfo);
             }
         } catch (SQLException e) {
