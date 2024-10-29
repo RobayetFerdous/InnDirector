@@ -54,28 +54,10 @@ public class LoginController implements Initializable {
                 break;
             }
         }
-<<<<<<< Updated upstream
-        if (isAuthenticated){
-            System.out.println("Login Successfull!");
-            Main.changeScene("receptionistPanel",900,600);
-        }else {
-            System.out.println("Invalid username or password.");
-            //alertbox
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Invalid username or password");
-            alert.setContentText("Please check your username and password and try again.");
-            alert.showAndWait();
-
-            //clr pass
-            passwordLogin.clear();
-        }
-=======
->>>>>>> Stashed changes
     }
 
     @FXML
     public void clickSignup(){
-        Main.changeScene("signup",600,400);
+        Main.changeScene("signup");
     }
 }

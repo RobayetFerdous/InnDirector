@@ -32,6 +32,6 @@ public class SignupController {
 
         System.out.println("Sign-up Successfull!");
 
-        Main.changeScene("login", 600, 400);
+        Main.changeScene("login");
     }
 }

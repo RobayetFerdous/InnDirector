@@ -14,7 +14,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         this.stage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
         //scene.getStylesheets().add(getClass().getResource("Style.css").toExternalForm());
         stage.setTitle("InnDirector");
         stage.setScene(scene);
@@ -25,10 +25,10 @@ public class Main extends Application {
         launch();
     }
 
-    public static void changeScene(String sceneName, int prefWidth, int prefHight) {
+    public static void changeScene(String sceneName) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(sceneName + ".fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), prefWidth, prefHight);
+            Scene scene = new Scene(fxmlLoader.load());
             stage.setScene(scene);
         } catch (IOException ex) {
             ex.printStackTrace();

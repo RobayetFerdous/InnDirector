@@ -6,14 +6,14 @@ import javafx.fxml.FXML;
 public class CheckOutController {
     @FXML
     public void clickLogout(){
-        Main.changeScene("login", 600, 400);
+        Main.changeScene("login");
     }
     @FXML
     public void clickNewCustomer(){
-        Main.changeScene("newCustomerForm",900,600);
+        Main.changeScene("newCustomerForm");
     }
     @FXML
     public void clickRoom(){
-        Main.changeScene("viewRoom",900,600);
+        Main.changeScene("viewRoom");
     }
 }

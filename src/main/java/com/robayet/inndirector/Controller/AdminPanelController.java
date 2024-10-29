@@ -6,6 +6,6 @@ import javafx.fxml.FXML;
 public class AdminPanelController {
     @FXML
     public void clickLogout(){
-        Main.changeScene("login", 600, 400);
+        Main.changeScene("login");
     }
 }
