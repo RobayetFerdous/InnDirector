@@ -6,6 +6,7 @@ import com.robayet.inndirector.service.UserService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -26,12 +27,22 @@ public class SignupController {
 
     @FXML
     public void clickSignup(ActionEvent event) {
-        String role = "normal";
-        UserService userService = new UserService();
-        userService.signup(new UserInfo(role, userNameSignup.getText(), passwordSignup.getText()));
+        if (userNameSignup.getText().isBlank() || passwordSignup.getText().isBlank()){
+            System.out.println("Blank username or password");
+            //alertbox
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Invalid username or password");
+            alert.setContentText("Username or assword can't be blank");
+            alert.showAndWait();
+        }else {
+            String role = "normal";
+            UserService userService = new UserService();
+            userService.signup(new UserInfo(role, userNameSignup.getText(), passwordSignup.getText()));
 
-        System.out.println("Sign-up Successfull!");
+            System.out.println("Sign-up Successfull!");
 
-        Main.changeScene("login");
+            Main.changeScene("login");
+        }
     }
 }

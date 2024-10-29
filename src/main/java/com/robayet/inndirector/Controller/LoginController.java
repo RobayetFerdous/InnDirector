@@ -31,27 +31,40 @@ public class LoginController implements Initializable {
         String password = passwordLogin.getText();
 
         UserService userService = new UserService();
+        boolean login = false;
 
         for (UserInfo user : userService.list()){
             if (user.getUsername().equals(username) && user.getPassword().equals(password)){
+                login =true;
                 System.out.println("Login successfull!");
                 if ("normal".equals(user.getRole())){
                     Main.changeScene("receptionistPanel");
                 } else if ("admin".equals(user.getRole())) {
                     Main.changeScene("adminPanel");
-                } else {
-                    System.out.println("Invalid username or password.");
-                    //alertbox
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setTitle("Error");
-                    alert.setHeaderText("Invalid username or password");
-                    alert.setContentText("Please check your username and password and try again.");
-                    alert.showAndWait();
-
-                    //clr pass
-                    passwordLogin.clear();
                 }
                 break;
+            }
+        }if (!login){
+            if (username.isBlank() || password.isBlank()){
+                System.out.println("Blank username or password");
+                //alertbox
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("Invalid username or password");
+                alert.setContentText("Username or assword can't be blank");
+                alert.showAndWait();
+            }
+            else {
+                System.out.println("Invalid username or password");
+                //alertbox
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("Invalid username or password");
+                alert.setContentText("Please check your username and password and try again.");
+                alert.showAndWait();
+
+                //clr pass
+                passwordLogin.clear();
             }
         }
     }
