@@ -14,7 +14,7 @@ public class UserService {
         try {
             Connection connection = ConnectionSingleton.getConnection();
             Statement statement = connection.createStatement();
-            String query = "INSERT INTO user VALUE('" + userInfo.getUsername() + "'," + userInfo.getPassword() + ");";
+            String query = "INSERT INTO user VALUE('" + userInfo.getRole() + "','" + userInfo.getUsername() + "'," + userInfo.getPassword() + ");";
             statement.execute(query);
         } catch (SQLException e) {
             throw new RuntimeException(e);
