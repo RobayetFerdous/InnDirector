@@ -1,12 +1,22 @@
 package com.robayet.inndirector.model;
 
 public class UserInfo {
+    private String role;
     private String username;
     private String password;
 
-    public UserInfo(String username, String password) {
+    public UserInfo(String role, String username, String password) {
+        this.role = role;
         this.username = username;
         this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public String getUsername() {

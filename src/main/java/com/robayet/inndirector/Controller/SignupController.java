@@ -26,8 +26,9 @@ public class SignupController {
 
     @FXML
     public void clickSignup(ActionEvent event) {
+        String role = "normal";
         UserService userService = new UserService();
-        userService.signup(new UserInfo(userNameSignup.getText(), passwordSignup.getText()));
+        userService.signup(new UserInfo(role, userNameSignup.getText(), passwordSignup.getText()));
 
         System.out.println("Sign-up Successfull!");
 
