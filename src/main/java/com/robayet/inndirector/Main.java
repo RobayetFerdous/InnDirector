@@ -15,7 +15,7 @@ public class Main extends Application {
         this.stage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 900, 600);
-        //scene.getStylesheets().add(getClass().getResource("Style.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("Style.css").toExternalForm());
         stage.setTitle("InnDirector");
         stage.setScene(scene);
         stage.show();

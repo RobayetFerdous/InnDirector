@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -20,12 +19,12 @@
                <stops>
                   <Stop>
                      <color>
-                        <Color red="0.529411792755127" green="0.6392157077789307" blue="0.6392157077789307" />
+                        <Color red="1.0" green="0.8705882430076599" blue="0.8039215803146362" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.6745098233222961" green="0.5529412031173706" blue="0.6039215922355652" />
+                        <Color red="1.0" green="0.6235294342041016" blue="0.3960784375667572" />
                      </color>
                   </Stop>
                </stops>
@@ -37,36 +36,35 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <ButtonBar layoutX="183.0" layoutY="332.0" prefHeight="40.0" prefWidth="200.0" />
-      <Button layoutX="34.0" layoutY="20.0" mnemonicParsing="false" onAction="#clickNewCustomer" prefHeight="40.0" prefWidth="200.0" text="New Customer">
+      <Button layoutX="34.0" layoutY="20.0" mnemonicParsing="false" onAction="#clickNewCustomer" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #1f2327;" text="New Customer" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-      <Button layoutX="34.0" layoutY="538.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="40.0" prefWidth="200.0" text="Logout">
+      <Button layoutX="34.0" layoutY="538.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #1f2327;" text="Logout" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-      <Button layoutX="34.0" layoutY="76.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Room">
+      <Button layoutX="34.0" layoutY="76.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #1f2327;" text="Room" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="34.0" layoutY="132.0" mnemonicParsing="false" onAction="#clickCheckOut" prefHeight="40.0" prefWidth="200.0" text="Check Out">
+      <Button layoutX="34.0" layoutY="132.0" mnemonicParsing="false" onAction="#clickCheckOut" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #1f2327;" text="Check Out" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="34.0" layoutY="188.0" mnemonicParsing="false" onAction="#clickCustomerInfo" prefHeight="40.0" prefWidth="200.0" text="Customer Info">
+      <Button layoutX="34.0" layoutY="188.0" mnemonicParsing="false" onAction="#clickCustomerInfo" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #1f2327;" text="Customer Info" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <TableView fx:id="roomInfoTableView" layoutX="268.0" layoutY="60.0" prefHeight="541.0" prefWidth="633.0">
+      <TableView fx:id="roomInfoTableView" layoutX="324.0" layoutY="76.0" prefHeight="470.0" prefWidth="522.0">
         <columns>
-          <TableColumn fx:id="roomNumber" prefWidth="120.0" text="Room Number" />
-          <TableColumn fx:id="cleaningStatus" minWidth="0.0" prefWidth="178.0" text="Cleaning Status" />
-            <TableColumn fx:id="priceTextField" prefWidth="146.0" text="Price" />
-            <TableColumn fx:id="BedType" prefWidth="188.0" text="Bed Type" />
+          <TableColumn fx:id="roomNumber" prefWidth="129.0" text="Room Number" />
+          <TableColumn fx:id="cleaningStatus" minWidth="0.0" prefWidth="166.0" text="Cleaning Status" />
+            <TableColumn fx:id="priceTextField" prefWidth="109.0" text="Price" />
+            <TableColumn fx:id="BedType" prefWidth="116.0" text="Bed Type" />
         </columns>
       </TableView>
    </children>

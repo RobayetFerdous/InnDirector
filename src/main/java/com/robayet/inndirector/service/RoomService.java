@@ -42,4 +42,14 @@ public class RoomService {
         }
         return roomInfoList;
     }
+    public void updateRoom(RoomInfo roomInfo){
+        try {
+            Connection connection = ConnectionSingleton.getConnection();
+            Statement statement = connection.createStatement();
+            String query = "UPDATE room SET status='" + roomInfo.getStatus() + "' WHERE number=" + roomInfo.getNumber() + ";";
+            statement.execute(query);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
