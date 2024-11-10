@@ -65,28 +65,18 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="382.0" layoutY="152.0" prefHeight="40.0" prefWidth="200.0" text="Customer Name:">
+      <Label layoutX="382.0" layoutY="152.0" prefHeight="40.0" prefWidth="200.0" text="Check Out:">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="382.0" layoutY="210.0" prefHeight="40.0" prefWidth="200.0" text="Check Out:">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Button layoutX="510.0" layoutY="498.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: black;" text="Save" textFill="WHITE">
+      <Button layoutX="510.0" layoutY="498.0" mnemonicParsing="false" onAction="#clickCheckOut" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: black;" text="Check Out" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <ChoiceBox layoutX="582.0" layoutY="99.0" prefHeight="34.0" prefWidth="200.0" />
-      <Label alignment="CENTER" layoutX="585.0" layoutY="210.0" prefHeight="40.0" prefWidth="200.0" text="time from system">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label alignment="CENTER" layoutX="582.0" layoutY="152.0" prefHeight="40.0" prefWidth="200.0" text="name">
+      <ChoiceBox fx:id="roomCoiceBox" layoutX="582.0" layoutY="99.0" prefHeight="34.0" prefWidth="200.0" />
+      <Label fx:id="dateTextField" alignment="CENTER" layoutX="585.0" layoutY="152.0" prefHeight="40.0" prefWidth="200.0">
          <font>
             <Font size="15.0" />
          </font>
