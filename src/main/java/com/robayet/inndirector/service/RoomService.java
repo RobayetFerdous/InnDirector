@@ -46,16 +46,9 @@ public class RoomService {
         try {
             Connection connection = ConnectionSingleton.getConnection();
             Statement statement = connection.createStatement();
-            String query = "UPDATE room SET status = '" + roomInfo.getStatus() +
-                    "', price = " + roomInfo.getPrice() +
-                    ", bed = '" + roomInfo.getBed() +
-                    "' WHERE number = " + roomInfo.getNumber() + ";";
-            int rowsUpdated = statement.executeUpdate(query);
-            if (rowsUpdated > 0) {
-                System.out.println("Room updated successfully.");
-            } else {
-                System.out.println("No room found with number: " + roomInfo.getNumber());
-            }
+            //UPDATE room SET status = 'dirty' WHERE number = 102;
+            String query = "UPDATE room SET status = '"+ roomInfo.getStatus() +"' WHERE number = "+ roomInfo.getNumber() +";";
+            statement.execute(query);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

@@ -84,7 +84,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="cleantingStatusField" layoutX="334.0" layoutY="304.0" prefHeight="32.0" prefWidth="200.0" />
+      <TextField fx:id="cleaningStatusField" layoutX="334.0" layoutY="304.0" prefHeight="32.0" prefWidth="200.0" />
       <Button layoutX="389.0" layoutY="411.0" mnemonicParsing="false" onAction="#clickUpdate" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: black;" text="Update" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />

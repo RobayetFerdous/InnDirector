@@ -13,6 +13,12 @@ public class RoomInfo {
         this.bed = bed;
     }
 
+    public RoomInfo(int number, String status) {
+        this.number = number;
+        this.status=status;
+    }
+
+
     public int getNumber() {
         return number;
     }

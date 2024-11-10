@@ -47,7 +47,7 @@ public class UpdateRoomController implements Initializable {
     private TableColumn<RoomInfo, String> cleaningStatusColumn;
 
     @FXML
-    private TextField cleantingStatusField;
+    private TextField cleaningStatusField;
 
     @FXML
     private TableColumn<RoomInfo, Number> roomNumberColumn;
@@ -58,26 +58,24 @@ public class UpdateRoomController implements Initializable {
     @FXML
     private TableView<RoomInfo> roomUpdateTableView;
 
-    private ObservableList<RoomInfo> currentTableData = roomUpdateTableView.getItems();
     @FXML
     void clickUpdate(ActionEvent event) {
+        int roomNumber = Integer.parseInt(roomNumberField.getText());
+        String cleaningStatus = cleaningStatusField.getText();
 
-        int currentRoomNumber = Integer.parseInt(roomNumberField.getText());
-        for (RoomInfo info : currentTableData){
-            if (info.getNumber() == currentRoomNumber){
-                info.setStatus(cleantingStatusField.getText());
+        RoomService roomService = new RoomService();
+        roomService.updateRoom(new RoomInfo(roomNumber,cleaningStatus));
 
-                roomUpdateTableView.setItems(currentTableData);
-                roomUpdateTableView.refresh();
-                break;
-            }
-        }
+        roomInfoObservableList.setAll(roomService.list());
+        System.out.println("Room status updated");
     }
     @FXML
     void clickRow(MouseEvent event){
-        RoomInfo click = roomUpdateTableView.getSelectionModel().getSelectedItem();
-        roomNumberField.setText(String.valueOf(click.getNumber()));
-        cleantingStatusField.setText(click.getStatus());
+         RoomInfo selectRoom = roomUpdateTableView.getSelectionModel().getSelectedItem();
+         if (selectRoom != null){
+             roomNumberField.setText(String.valueOf(selectRoom.getNumber()));
+             cleaningStatusField.setText(selectRoom.getStatus());
+         }
     }
     private ObservableList<RoomInfo> roomInfoObservableList;
     @Override
