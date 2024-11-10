@@ -19,7 +19,7 @@ public class ConnectionSingleton {
         try {
             connection = DriverManager.getConnection(DB_URL,DB_USERNAME,DB_PASSWORD);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 }

@@ -58,12 +58,11 @@ public class UpdateRoomController implements Initializable {
     @FXML
     private TableView<RoomInfo> roomUpdateTableView;
 
-
+    private ObservableList<RoomInfo> currentTableData = roomUpdateTableView.getItems();
     @FXML
     void clickUpdate(ActionEvent event) {
-        ObservableList<RoomInfo> currentTableData = roomUpdateTableView.getItems();
-        int currentRoomNumber = Integer.parseInt(roomNumberField.getText());
 
+        int currentRoomNumber = Integer.parseInt(roomNumberField.getText());
         for (RoomInfo info : currentTableData){
             if (info.getNumber() == currentRoomNumber){
                 info.setStatus(cleantingStatusField.getText());
