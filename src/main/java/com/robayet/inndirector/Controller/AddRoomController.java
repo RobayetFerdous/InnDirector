@@ -11,6 +11,18 @@ import javafx.scene.control.TextField;
 
 public class AddRoomController {
     @FXML
+    public void clickNewRoom() {
+        Main.changeScene("addRoom");
+    }
+    @FXML
+    void clickNewEmployee(ActionEvent event) {
+        Main.changeScene("addEmployee");
+    }
+    @FXML
+    void clickViewRoom() {
+        Main.changeScene("viewRoomAsAdmin");
+    }
+    @FXML
     void clickLogout(ActionEvent event) {
         Main.changeScene("login");
     }

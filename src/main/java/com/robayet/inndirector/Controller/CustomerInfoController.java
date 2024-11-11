@@ -36,6 +36,21 @@ public class CustomerInfoController implements Initializable {
     }
 
     @FXML
+    public void clickCustomerInfo() {
+        Main.changeScene("customerInfo");
+    }
+
+    @FXML
+    public void clickUpdateRoom() {
+        Main.changeScene("updateRoom");
+    }
+
+    @FXML
+    void clickPickUpService() {
+        Main.changeScene("pickUpService");
+    }
+
+    @FXML
     private TableView<CustomerInfo> customerInfoTableView;
 
     @FXML

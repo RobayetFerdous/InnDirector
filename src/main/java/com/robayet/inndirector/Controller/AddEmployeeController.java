@@ -21,9 +21,20 @@ public class AddEmployeeController {
     private TextField phoneField;
 
     @FXML
-    void clickLogout(ActionEvent event) {
+    public void clickLogout() {
         Main.changeScene("login");
     }
+
+    @FXML
+    public void clickNewRoom() {
+        Main.changeScene("addRoom");
+    }
+
+    @FXML
+    void clickViewRoom() {
+        Main.changeScene("viewRoomAsAdmin");
+    }
+
     private ObservableList<DriverInfo> driverInfoObservableList;
     @FXML
     void clickadd(ActionEvent event) {

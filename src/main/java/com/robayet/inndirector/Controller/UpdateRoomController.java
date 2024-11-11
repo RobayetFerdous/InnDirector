@@ -21,6 +21,10 @@ import java.util.ResourceBundle;
 
 public class UpdateRoomController implements Initializable {
     @FXML
+    void clickPickUpService() {
+        Main.changeScene("pickUpService");
+    }
+    @FXML
     public void clickLogout() {
         Main.changeScene("login");
     }

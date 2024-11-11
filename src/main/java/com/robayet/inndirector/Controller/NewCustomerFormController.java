@@ -18,20 +18,38 @@ import java.util.ResourceBundle;
 
 public class NewCustomerFormController implements Initializable {
     @FXML
-    public void clickLogout(){
+    public void clickLogout() {
         Main.changeScene("login");
     }
+
     @FXML
-    public void clickRoom(){
+    public void clickNewCustomer() {
+        Main.changeScene("newCustomerForm");
+    }
+
+    @FXML
+    public void clickRoom() {
         Main.changeScene("viewRoom");
     }
+
     @FXML
-    public void clickCheckOut(){
+    public void clickCheckOut() {
         Main.changeScene("checkOut");
     }
+
     @FXML
-    public void clickCustomerInfo(){
+    public void clickCustomerInfo() {
         Main.changeScene("customerInfo");
+    }
+
+    @FXML
+    public void clickUpdateRoom() {
+        Main.changeScene("updateRoom");
+    }
+
+    @FXML
+    void clickPickUpService() {
+        Main.changeScene("pickUpService");
     }
     @FXML
     private RadioButton female;

@@ -19,20 +19,38 @@ import java.util.ResourceBundle;
 
 public class CheckOutController implements Initializable {
     @FXML
-    public void clickLogout(){
+    public void clickLogout() {
         Main.changeScene("login");
     }
+
     @FXML
-    public void clickNewCustomer(){
+    public void clickNewCustomer() {
         Main.changeScene("newCustomerForm");
     }
+
     @FXML
-    public void clickRoom(){
+    public void clickRoom() {
         Main.changeScene("viewRoom");
     }
+
     @FXML
-    public void clickCustomerInfo(){
+    public void clickCheckOut() {
+        Main.changeScene("checkOut");
+    }
+
+    @FXML
+    public void clickCustomerInfo() {
         Main.changeScene("customerInfo");
+    }
+
+    @FXML
+    public void clickUpdateRoom() {
+        Main.changeScene("updateRoom");
+    }
+
+    @FXML
+    void clickPickUpService() {
+        Main.changeScene("pickUpService");
     }
     @FXML
     private ChoiceBox<Integer> roomCoiceBox;
@@ -40,7 +58,7 @@ public class CheckOutController implements Initializable {
     private Label dateTextField;
     @FXML
     void clickCheckOut(ActionEvent event) {
-
+        System.out.println("Check Out Done");
     }
     private ObservableList<Integer> integerObservableList;
     @Override

@@ -23,14 +23,17 @@ public class ReceptionistPanelController {
     public void clickCheckOut() {
         Main.changeScene("checkOut");
     }
+
     @FXML
-    public void clickCustomerInfo(){
+    public void clickCustomerInfo() {
         Main.changeScene("customerInfo");
     }
+
     @FXML
-    public void clickUpdateRoom(){
+    public void clickUpdateRoom() {
         Main.changeScene("updateRoom");
     }
+
     @FXML
     void clickPickUpService() {
         Main.changeScene("pickUpService");

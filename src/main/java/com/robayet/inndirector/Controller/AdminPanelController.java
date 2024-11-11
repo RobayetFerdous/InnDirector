@@ -6,17 +6,20 @@ import javafx.fxml.FXML;
 
 public class AdminPanelController {
     @FXML
-    public void clickLogout(){
+    public void clickLogout() {
         Main.changeScene("login");
     }
+
     @FXML
-    public void clickNewRoom(){
+    public void clickNewRoom() {
         Main.changeScene("addRoom");
     }
+
     @FXML
     void clickViewRoom() {
         Main.changeScene("viewRoomAsAdmin");
     }
+
     @FXML
     void clickNewEmployee(ActionEvent event) {
         Main.changeScene("addEmployee");
