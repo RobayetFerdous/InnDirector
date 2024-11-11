@@ -31,4 +31,8 @@ public class ReceptionistPanelController {
     public void clickUpdateRoom(){
         Main.changeScene("updateRoom");
     }
+    @FXML
+    void clickPickUpService() {
+        Main.changeScene("pickUpService");
+    }
 }

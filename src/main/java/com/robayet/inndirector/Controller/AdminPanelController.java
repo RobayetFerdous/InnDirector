@@ -17,4 +17,8 @@ public class AdminPanelController {
     void clickViewRoom() {
         Main.changeScene("viewRoomAsAdmin");
     }
+    @FXML
+    void clickNewEmployee(ActionEvent event) {
+        Main.changeScene("addEmployee");
+    }
 }
