@@ -49,5 +49,10 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
+      <Button layoutX="34.0" layoutY="131.0" mnemonicParsing="false" onAction="#clickViewRoom" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #1f2327;" text="View Room" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

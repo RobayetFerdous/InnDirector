@@ -53,4 +53,15 @@ public class RoomService {
             throw new RuntimeException(e);
         }
     }
+    public void adminUpdateRoom(RoomInfo roomInfo) {
+        try {
+            Connection connection = ConnectionSingleton.getConnection();
+            Statement statement = connection.createStatement();
+            //update room set status='dirty',price=1500,bed='double' where number=101;
+            String query = "UPDATE room SET status = '"+ roomInfo.getStatus() +"', price = "+ roomInfo.getPrice() + ", bed ='"+ roomInfo.getBed() +"' WHERE number = "+ roomInfo.getNumber() +";";
+            statement.execute(query);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

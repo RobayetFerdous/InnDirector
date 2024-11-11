@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.robayet.inndirector.Controller.ViewRoomAsAdminController">
+   <children>
+      <Label alignment="CENTER" layoutY="14.0" prefHeight="40.0" prefWidth="901.0" text="View Room">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="183.0" layoutY="332.0" prefHeight="40.0" prefWidth="200.0" />
+      <Button layoutX="83.0" layoutY="509.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #1f2327;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <TableView fx:id="roominfoTableView" layoutX="357.0" layoutY="61.0" onMouseClicked="#clickRow" prefHeight="519.0" prefWidth="522.0">
+        <columns>
+          <TableColumn fx:id="numberColumn" prefWidth="78.0" text="No." />
+          <TableColumn fx:id="statusColumn" prefWidth="123.0" text="Status" />
+            <TableColumn fx:id="priceColumn" minWidth="0.0" prefWidth="152.0" text="Price" />
+            <TableColumn fx:id="bedColumn" prefWidth="168.0" text="Bed type" />
+        </columns>
+      </TableView>
+      <Button layoutX="83.0" layoutY="449.0" mnemonicParsing="false" onAction="#clickBack" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #1f2327;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="83.0" layoutY="388.0" mnemonicParsing="false" onAction="#clickUpdate" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #1f2327;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="83.0" layoutY="69.0" prefHeight="40.0" prefWidth="200.0" text="Room Number">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="numberField" disable="true" layoutX="83.0" layoutY="109.0" prefHeight="32.0" prefWidth="200.0" />
+      <Label layoutX="83.0" layoutY="141.0" prefHeight="40.0" prefWidth="200.0" text="Cleaning Status">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="statusField" layoutX="83.0" layoutY="181.0" prefHeight="32.0" prefWidth="200.0" />
+      <Label layoutX="83.0" layoutY="213.0" prefHeight="40.0" prefWidth="200.0" text="Room Price">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="priceField" layoutX="83.0" layoutY="253.0" prefHeight="32.0" prefWidth="200.0" />
+      <Label layoutX="83.0" layoutY="285.0" prefHeight="40.0" prefWidth="200.0" text="Room Size">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="bedField" layoutX="83.0" layoutY="325.0" prefHeight="32.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
